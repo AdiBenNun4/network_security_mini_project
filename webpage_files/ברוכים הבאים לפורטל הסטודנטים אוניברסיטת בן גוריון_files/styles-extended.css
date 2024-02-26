@@ -1,0 +1,534 @@
+﻿.portal-body {
+    /*background-color: white;*/
+}
+
+    .portal-body .mdc-floating-label--required:not(.mdc-floating-label--hide-required-marker)::after {
+        content: "" !important;
+    }
+
+    .portal-body .page-container .sidebar {
+        z-index: 10;
+    }
+
+    .portal-body .swiper-button svg {
+        fill: currentColor;
+    }
+
+
+
+    .portal-body .section.section--articles.js-art-section .articles-row {
+        padding: 1.025rem 0;
+        background-color: white;
+    }
+
+        .portal-body .section.section--articles.js-art-section .articles-row .articles-row__list a {
+            line-height: 1.4;
+            align-items: center;
+            text-decoration: none;
+        }
+
+            .portal-body .section.section--articles.js-art-section .articles-row .articles-row__list a .link__arrow img {
+                display: block;
+            }
+
+    .portal-body app-event-details h4.event-title a,
+    .portal-body app-lesson-details h4.event-title a {
+        white-space: normal;
+        text-decoration: none;
+    }
+
+    .portal-body app-month-event-item app-location-select-picker .mapsSelectModal,
+    .portal-body app-my-day app-location-select-picker .mapsSelectModal {
+        left: 75vw !important;
+    }
+
+
+
+@media (max-width: 767px) {
+    .portal-body app-month-event-item app-location-select-picker .mapsSelectModal,
+    .portal-body app-my-day app-location-select-picker .mapsSelectModal {
+        left: 50% !important;
+    }
+}
+
+.portal-body app-exam-item .mane-format,
+.portal-body app-exam-item .details-description-format {
+    position: relative;
+}
+
+    .portal-body app-exam-item .mane-format .format-click-text,
+    .portal-body app-exam-item .details-description-format .format-click-text {
+        cursor: pointer;
+    }
+
+@media(min-width: 768px) {
+    .portal-body app-exam-item .details-description-format .format-click-text {
+        white-space: nowrap;
+    }
+}
+
+.portal-body app-exams-list .no-results-exams {
+    text-align: center;
+    font-size: 18px;
+}
+
+.portal-body app-exams-list-card mat-card.exams-list-card {
+    min-height: 550px;
+}
+
+/*all grades section*/
+.portal-body .all-grades-card .table-description {
+    font-size: .875rem;
+    font-weight: 400;
+    line-height: 1.93;
+    padding-bottom: 1rem;
+    padding-right: 1rem;
+}
+
+.portal-body .all-grades-card .table-header {
+    padding-bottom: 0 !important;
+}
+
+@media (max-width: 991px) {
+    .portal-body .all-grades-card .table-description {
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .portal-body .section.section--articles.js-art-section {
+        background: #F9F9F9;
+        border: 0;
+        padding: 0.625rem 0;
+    }
+
+        .portal-body .section.section--articles.js-art-section .articles-row {
+            padding: 0;
+            background-color: #F9F9F9;
+        }
+
+            .portal-body .section.section--articles.js-art-section .articles-row .articles-row__list a {
+                line-height: 1.7;
+                align-items: center;
+            }
+
+                .portal-body .section.section--articles.js-art-section .articles-row .articles-row__list a .link__arrow img {
+                    display: block;
+                }
+
+    app-home-cards-grid app-grid-card.mobile-modal:has(.card-component-wrap:not(.opened)) {
+        display: none;
+    }
+
+    app-home-cards-grid app-mobile-modal-trigger {
+        margin-bottom: 0 !important;
+    }
+}
+
+.program-block h1, h2, h4, h5, h6 {
+    margin: 0;
+    font-weight: 400;
+}
+
+.program-block a {
+    text-decoration: none;
+}
+
+.program-block svg {
+    fill: currentColor;
+    width: 100%;
+    height: 100%;
+}
+/*
+.section--third {
+    background-color: #fff;
+}*/
+
+.department-block__content a {
+    text-decoration: none;
+}
+
+.slide-min__img:before {
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+}
+
+ul:not(.header__menu-ul):not(.typeahead__list):not(.select2-results__options):not(.select2-selection__rendered):not(.pagination):not(.select):not(.science-item__socials):not(.clear-ul-style) li:before {
+    content: "";
+    position: absolute;
+    right: 0.25rem;
+    top: 0.375rem;
+    display: block;
+    width: 0.5rem;
+    height: 0.75rem;
+    background-color: #f90;
+    -webkit-transform: skewX(-35deg);
+    -ms-transform: skewX(-35deg);
+    transform: skewX(-35deg);
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+}
+
+/* widget - student calendar */
+.portal-body app-day-schedule .calendar-navigation {
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+    margin: 0 0 1rem;
+}
+
+    .portal-body app-day-schedule .calendar-navigation .current-day {
+        align-items: center;
+        background: #F2F2F2;
+        border-radius: 0.25rem;
+        display: flex;
+        justify-content: center;
+        height: 2.25rem;
+        gap: 0.25rem;
+        min-width: 2.25rem;
+        padding: 0.5rem;
+    }
+
+        .portal-body app-day-schedule .calendar-navigation .current-day .current-day-icon {
+            --icon-size: 1.25rem;
+        }
+
+        .portal-body app-day-schedule .calendar-navigation .current-day .current-day-label {
+            font-weight: 700;
+        }
+
+    .portal-body app-day-schedule .calendar-navigation .month-selector {
+        display: flex;
+        gap: 0.25rem;
+        font-size: 1.125rem;
+        font-weight: 700;
+        line-height: 1.3;
+    }
+
+        .portal-body app-day-schedule .calendar-navigation .month-selector .prev,
+        .portal-body app-day-schedule .calendar-navigation .month-selector .next {
+            line-height: 0;
+        }
+
+    .portal-body app-day-schedule .calendar-navigation .arrow-icon {
+        --icon-size: 2rem !important;
+    }
+
+.state.color-student-type-CourseGrade {
+    --state-color: var(--primary-orange-accessible) !important;
+}
+
+.state.color-student-type-Exam, .state.color-student-type-Quiz {
+    --state-color: var(--primary-orange) !important;
+}
+
+.app-dropdown-content-end.table-dropdown.app-dropdown-content-wrap.ng-star-inserted.opened {
+    z-index: 10;
+}
+
+
+.picture-block--second .info-block .button,
+.advantages-block .button,
+.career-block__list .career-item__name,
+.chances-item .button,
+.looking-for__body .button,
+.section--career .button,
+.bakalavr-block .simple-item,
+.section--connection .button,
+.section.section--small-about .button,
+.section.section--vektor .button,
+.section.section--committed .button,
+.section.section--masters .button,
+.campus-services__list .link--stud,
+.information-block__text .share-link,
+.section.section--education .button,
+.section.section--candidates-first .candidates-item__link,
+.section.section--study .link--title,
+.inner-bottom .link--connect,
+.bottom-slider.bottom-slider--lobby .slide-min,
+.section.section--cards .link,
+.section.section--cards .card-item__title,
+.section.section--study-about .study-item__body .link--title,
+.section.section--masters .link--title,
+.section.section--masters .link--dop,
+.news-slider .link--title,
+.section.section--soc-include .link--title {
+    text-decoration: none;
+}
+
+
+.section.section--campus-services,
+.section.section--committed,
+.section.section--connection.gray,
+.section.section--degree,
+.section.section--career,
+.section.section--advantages,
+.section.section--program,
+.section.section--chances,
+.section--third,
+.bakalavr-block,
+.section.section--enter-program,
+.section.section--vektor,
+.section.section--housing,
+.section.section--masters,
+.section.section--grand.section--gray,
+.section.section--information,
+.section.section--education,
+.section.section--candidates-first,
+.section.section--study,
+.bottom-slider.bottom-slider--lobby,
+.section.section--culture,
+.section.section--cards,
+.section.section--soc-include,
+.section.section--simple,
+.section.section--looking-for,
+.section.section--candidates-first,
+.section.section--program-second,
+.section.section--faq {
+    background-color: #fff;
+    margin-bottom: 2rem;
+    margin-top: 0;
+}
+
+.section.section--small-about {
+    background-color: #fff;
+}
+
+.computer-science.computer-science-swiper-image,
+.section.section--computer, .inner-bottom {
+    margin-bottom: 2rem;
+    margin-top: 0;
+}
+
+.section.section--information {
+    padding: 0 1rem;
+}
+
+.information-block__text a:not(.clear-link-style) {
+    border-bottom: none;
+}
+
+.inner-bottom {
+    padding: 1rem;
+}
+
+.section--study-about:after {
+    content: none;
+}
+
+.preloader__icon.disabled-spinning {
+    -webkit-animation: none;
+    animation: none;
+}
+
+.section.button-section button {
+    margin: 1.5rem auto;
+}
+
+    .section.button-section button.left-side {
+        margin-left: 0;
+    }
+
+    .section.button-section button.right-side {
+        margin-right: 0;
+    }
+
+@media (max-width: 1024px) {
+    .section.section--chances {
+        padding-bottom: 8rem !important;
+    }
+
+    .section.section--connection {
+        margin-top: 0 !important;
+    }
+
+    .section.section--committed {
+        padding-bottom: 1rem;
+    }
+
+    .section.section--committed,
+    .section.section--campus-services {
+        margin-top: 0 !important;
+        margin-bottom: 2rem;
+    }
+
+    .section.section--culture {
+        padding-bottom: 3rem;
+    }
+
+    .section.section--small-about {
+        padding-bottom: 1rem;
+    }
+
+    .arrow-uniq img {
+        display: block;
+    }
+
+    .computer-science__text {
+        padding: 1rem;
+    }
+
+    .bakalavr-block__content {
+        margin-top: 0;
+    }
+
+    .section--soc-include .include-item__name {
+        max-width: 12rem;
+    }
+
+    .section.section--cards {
+        padding-bottom: 3rem;
+    }
+
+    .bottom-slider.bottom-slider--lobby .slide-min {
+        padding: 0 1rem;
+    }
+
+    .section--study .section__triangles .title {
+        margin: 2.5625rem 0.1625rem 0 0;
+    }
+
+    .grand-block__top .title--sub-second {
+        padding: 0 1rem;
+    }
+
+    .section.section--advantages {
+        padding: 1rem;
+    }
+
+    .section--chances .section__triangle {
+        bottom: -0.5%;
+    }
+
+    .audio-block__close img {
+        display: block;
+    }
+}
+
+@media (min-width: 1024px) {
+    .section.section--committed .about-item.about-item--img {
+        padding: 0 9rem;
+    }
+
+    .section.section--committed .about-item__right {
+        max-width: 22rem;
+    }
+
+    .section.section--chances {
+        padding: 1rem 0 7rem !important;
+    }
+
+        .section.section--chances .section__triangle {
+            max-width: 30.75rem;
+        }
+
+    .section.section--committed { /*E.S. Removed by Netanel At 11-1-2024*/
+        /*      padding-top: 0 !important;
+        padding-bottom: 0 !important;*/
+    }
+
+    .section.section--cards .cards-block .card-item {
+        box-shadow: 0 0 0.8rem #00000026;
+    }
+
+    .section.section--cards .cards-block .swiper-slide {
+        padding: 0.5rem;
+    }
+
+    .section.section--cards {
+        padding: 2.125rem 1rem 1rem 1rem;
+    }
+
+    .section.section--culture {
+        padding-bottom: 3rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+        .section.section--culture .culture-block__content {
+            padding-left: 3rem;
+        }
+
+    .section.section--candidates-first {
+        padding-top: 1rem;
+    }
+
+    .section.section--masters {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        margin: 0;
+    }
+
+    .degree-block__content {
+        padding-right: 2rem;
+    }
+
+    .picture-block--second {
+        overflow: hidden;
+    }
+
+    .computer-science__text {
+        transform: translateX(-15%);
+    }
+
+    .picture-block--second .picture-block__image {
+        padding-bottom: 36%;
+    }
+
+        .picture-block--second .picture-block__image:after {
+            top: -120%;
+        }
+
+    .section--third .section__triangles {
+        width: 64% !important;
+    }
+
+    .chances-block__list {
+        margin: 3.625rem 2rem 0;
+    }
+
+    .section--chances .section__triangle {
+        bottom: -1%;
+    }
+
+    .program-block .program-block__content {
+        padding: 1%;
+    }
+
+    .section.section--advantages {
+        padding: 1%;
+        margin: 0;
+    }
+
+    .advantages-block__list.grid-4 {
+        margin: 1.875rem 1rem;
+    }
+
+    [data-slider="science"] {
+        max-width: 36.25rem;
+    }
+
+    [data-slider="science-big"] {
+        max-width: 71.25rem !important;
+    }
+
+    .looking-for .looking-for__img {
+        max-width: 40.5rem;
+    }
+
+    .looking-for .looking-for__body {
+        padding: 0 5% 0 41%;
+    }
+
+    .arrow-uniq img {
+        display: block;
+    }
+
+    .section.section--career {
+        padding: 7.5rem 0 0;
+    }
+
+    .career-block__list {
+        width: 120%;
+    }
+}
