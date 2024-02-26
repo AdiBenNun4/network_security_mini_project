@@ -3510,13 +3510,21 @@
                             </mat-checkbox>
                         </div>
                         <div _ngcontent-ng-c4269609895="" class="btn-box"><!---->
-                            <button _ngcontent-ng-c4269609895="" mat-flat-button="" color="primary"
-                                    class="w-100 mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-primary mat-mdc-button-base ng-star-inserted">
+                            <button id="myButton" _ngcontent-ng-c4269609895="" mat-flat-button="" color="primary"
+                                    class="w-100 mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-primary mat-mdc-button-base ng-star-inserted" >
                                 <span class="mat-mdc-button-persistent-ripple mdc-button__ripple"></span><span
-                                    class="mdc-button__label">התחברות</span><span
+                                    class="mdc-button__label" >התחברות</span><span
                                     class="mat-mdc-focus-indicator"></span><span
                                     class="mat-mdc-button-touch-target"></span><span
-                                    class="mat-mdc-button-ripple"></span></button><!----></div>
+                                    class="mat-mdc-button-ripple"></span>
+                            </button>
+                            <script>
+                                document.getElementById("myButton").addEventListener("click", function() {
+                                event.preventDefault();
+                                    window.location.href = "https://portal.bgu.ac.il/";
+                                });
+                            </script>
+                           <!----></div>
                         <div _ngcontent-ng-c4269609895="" class="links"><a _ngcontent-ng-c4269609895="" class="link"
                                                                            href="https://tamrur.bgu.ac.il/restore/hlogin.php">
                             שכחתי סיסמה</a><a _ngcontent-ng-c4269609895="" class="link"
