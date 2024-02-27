@@ -2,6 +2,12 @@ from scapy.all import *
 from scapy.layers.l2 import ARP, Ether
 
 
+def ip_route(enable_status: str):
+    print("Enable IP Routing")
+    path = "/proc/sys/net/ipv4/ip_forward"
+    with open(path, "w") as f:
+        print(str, f)
+
 def get_mac_address(ip_address: str):
     """
     Returns MAC address of any device connected to the network given its IP address

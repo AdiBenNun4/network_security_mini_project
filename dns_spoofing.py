@@ -10,6 +10,7 @@ class dns_spoofing:
         self.queueNum = queueNum
         self.queue = NetfilterQueue()
 
+
     def callBack(self, packet):
         scapyPacket = IP(packet.get_payload())
         if scapyPacket.haslayer(DNSRR):
@@ -40,12 +41,3 @@ class dns_spoofing:
         except KeyboardInterrupt:
             os.system(f'iptables -D FORWARD -j NFQUEUE --queue-num {self.queueNum}')
             print("iptable rule flushed")
-
-
-if __name__ == '__main__':
-    hostDict = {
-        b"https://portal.bgu.ac.il": "13.107.246.43"
-    }
-    queueNum = 1
-    snoof = dns_spoofing(hostDict, queueNum)
-    snoof()
