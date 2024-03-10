@@ -1,2 +1,4 @@
 scapy
 netfilterqueue
+Flask
+flask-cors
