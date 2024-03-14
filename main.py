@@ -2,7 +2,11 @@ import argparse
 from ARP_spoofing import *
 from dns_spoofing import *
 
+
 def main():
+    """
+    Sets up and executes ARP spoofing and DNS spoofing attacks
+    """
     parser = argparse.ArgumentParser(description='ARP spoof script')
     parser.add_argument("-g", '--gateway_ip', help='Host IP address')
     parser.add_argument("-v", '--victim_ip', help='Victim IP address')
