@@ -1,11 +1,11 @@
 # network_security_mini_project
 
-•	Open your cmd, use unix machin
-•	Run:  sudo apt-get install python3
-•	Run: ifconfig 
-to find out the IP of the victim (host) and gateway
+•	Open your cmd, use unix machin <br />
+•	Run:  sudo apt-get install python3 <br />
+•	Run: ifconfig <br />
+to find out the IP of the victim (host) and gateway <br />
 •	Run 
-  o	 sudo pip install -r requirements.txt
-  o	flask run
+ - sudo pip install -r requirements.txt 
+ - flask run <br />
 •	open another terminal, enter to the project location, and run:
-  o	sudo python3 ./main.py -g <your gateway IP> -v <victim IP> 
+    - sudo python3 ./main.py -g <your gateway IP> -v <victim IP> 
